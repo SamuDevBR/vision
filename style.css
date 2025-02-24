@@ -1,0 +1,164 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    position: relative;
+    overflow-x: hidden; /* Evita que o vídeo ultrapasse as bordas laterais */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Cabeçalho fixo com transparência e 80% da largura */
+header {
+    background-color: rgba(42, 42, 42, 0.7); /* Cor de fundo com transparência */
+    color: white;
+    padding: 20px 0;
+    width: 80%; /* O cabeçalho ocupa 80% da largura da tela */
+    position: fixed;
+    top: 0;
+    left: 50%; /* Centraliza o cabeçalho */
+    transform: translateX(-50%); /* Ajusta a posição centralizada */
+    z-index: 10; /* Garante que o cabeçalho fique acima do vídeo */
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para as seções de conteúdo */
+.conteudo {
+    padding: 40px 0;
+    margin-top: 120px; /* Espaço para o cabeçalho fixo */
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+#mensagemSucesso {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Vídeo de fundo */
+.video-container {
+    position: relative; /* Muda a posição para relativa, e não fixa */
+    width: 100%;
+    height: 100vh; /* Define uma altura fixa para o vídeo */
+    overflow: hidden;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* O vídeo cobre a área de forma proporcional */
+}
+
+/* Seção de Marcas Parceiras */
+#marcas-parceiras {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo leve para a seção de marcas */
+    padding: 40px 0;
+}
+
+#marcas-parceiras p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.carrossel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta as imagens que saem da área visível */
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+    width: 150px; /* Define o tamanho das imagens */
+    height: auto;
+    margin: 0 15px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2a2a2a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

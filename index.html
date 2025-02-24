@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Mecânica ABC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Auto Mecânica ABC</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Vídeo de fundo -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="arq/video-fundo.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+    </div>
+
+    <!-- Seção Sobre a Empresa -->
+    <section id="sobre" class="conteudo">
+        <div class="container">
+            <h2>Sobre a Empresa</h2>
+            <p>Bem-vindo à Auto Mecânica ABC, uma empresa com mais de 10 anos de experiência no mercado. Nossa missão é oferecer serviços de alta qualidade para garantir a segurança e o desempenho do seu veículo. Contamos com uma equipe de profissionais altamente capacitados e uma infraestrutura moderna para atender às necessidades dos nossos clientes.</p>
+        </div>
+    </section>
+
+    <!-- Carrossel de marcas parceiras -->
+    <section id="marcas-parceiras" class="conteudo">
+        <div class="container">
+            <h2>Marcas Parceiras</h2>
+            <p>Confira as marcas de confiança com as quais trabalhamos para oferecer a melhor qualidade e atendimento para seu veículo.</p>
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <img src="logo1.png" alt="Marca 1">
+                    <img src="logo2.png" alt="Marca 2">
+                    <img src="logo3.png" alt="Marca 3">
+                    <img src="logo4.png" alt="Marca 4">
+                    <img src="logo5.png" alt="Marca 5">
+                    <img src="logo6.png" alt="Marca 6">
+                    <img src="logo7.png" alt="Marca 7">
+                    <img src="logo8.png" alt="Marca 8">
+                    <img src="logo9.png" alt="Marca 9">
+                    <img src="logo10.png" alt="Marca 10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="conteudo">
+        <div class="container">
+            <h2>Contato</h2>
+            <form id="formContato" onsubmit="enviarMensagem(event)">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensagemSucesso"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Auto Mecânica ABC | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
