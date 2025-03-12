@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Mecânica ABC</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img/logo.png" alt="Marca 1">
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#orcamento">Orçamento</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Vídeo de fundo -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="arq/video-fundo.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+
+        <!-- Texto sobre o vídeo -->
+        <div class="texto-sobre-video">
+            <h1>Paixão por 4 rodas!</h1>
+            <p>Sua máquina não pode ficar parada, deixe a gente cuidar de tudo para você!</p>
+        </div>
+
+        <!-- Barra de Letreiro -->
+        <div class="letreiro-container">
+            <div class="letreiro">
+                🔥 Promoção: Troca de óleo com 20% de desconto! | 🚗 Alinhamento e balanceamento grátis na revisão completa! | ⚙️ Mão de obra especializada para todas as marcas!
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                🔥 Promoção: Troca de óleo com 20% de desconto! | 🚗 Alinhamento e balanceamento grátis na revisão completa! | ⚙️ Mão de obra especializada para todas as marcas!
+            </div>
+        </div>        
+    </div>
+
+    <!-- Seção Sobre a Empresa -->
+    <section id="sobre" class="conteudo">
+        <div class="container">
+            <h2>Bem-vindo à Vision</h2>
+            <p><strong>Somos a melhor Auto Mecânica da região!</strong> Aqui, tradição e qualidade se unem para proporcionar a melhor experiência em cuidados automotivos. 
+                Há mais de 6 anos, iniciamos nossa jornada com o objetivo de oferecer serviços de alta qualidade, com preços justos e um atendimento sempre honesto e confiável. 
+                Desde então, nossa dedicação em lhe atender só tem crescido.
+                <br><br><br>
+                Vision é uma empresa de princípios, sendo eles a honestidade, dedicação e qualidade. Esperamos por você!
+            </p>
+        </div>
+    </section>
+
+    <!-- Carrossel de marcas parceiras -->
+    <section id="marcas-parceiras" class="conteudo">
+        <div class="container">
+            <h2>Marcas Parceiras</h2>
+            <p>Confira as marcas de confiança com as quais trabalhamos para oferecer a melhor qualidade e atendimento para seu veículo.</p>
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <img src="img/cherry.png" alt="Marca 1">
+                    <img src="img/citroen.png" alt="Marca 2">
+                    <img src="img/nissan.png" alt="Marca 3">
+                    <img src="img/fiat.png" alt="Marca 4">
+                    <img src="img/ford.png" alt="Marca 5">
+                    <img src="img/honda.png" alt="Marca 6">
+                    <img src="img/hyundai.png" alt="Marca 7">
+                    <img src="img/toyota.png" alt="Marca 8">
+                    <img src="img/volkswagen.png" alt="Marca 9">
+                    <img src="img/chevrolet.png" alt="Marca 10">
+                    <img src="img/peugeot.png" alt="Marca 11">
+                    <img src="img/renault.png" alt="Marca 12">
+                    <img src="img/kia.png" alt="Marca 13">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Localização -->
+    <section id="localizacao" class="conteudo">
+        <div class="container">
+            <h2>Onde Estamos</h2>
+            <div id="mapa-container" style="width: 100%; height: 400px;"></div>
+        </div>
+    </section>
+
+    <!-- Seção Orçamento Online -->
+    <section id="orcamento" class="conteudo">
+        <div class="container">
+            <h2>Solicite seu Orçamento Online</h2>
+            <form id="formOrcamento">
+                <label for="nomeOrcamento">Nome:</label>
+                <input type="text" id="nomeOrcamento" required>
+    
+                <label for="emailOrcamento">Email:</label>
+                <input type="email" id="emailOrcamento" required>
+    
+                <label for="descricaoServico">Descrição do Serviço:</label>
+                <textarea id="descricaoServico" required></textarea>
+    
+                <button type="submit">Solicitar Orçamento</button>
+            </form>
+            <div id="mensagemSucessoOrcamento"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Auto Mecânica ABC | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+/* Resetando alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    position: relative;
+    overflow-x: hidden; /* Evita que o vídeo ultrapasse as bordas laterais */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Cabeçalho fixo com transparência */
+header {
+    background-color: rgba(255, 255, 255, 0.603);
+    color: white;
+    padding: 30px 0;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+    box-shadow: 0 13px 20px 5px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Seções de conteúdo */
+.conteudo {
+    padding: 40px 0;
+    margin-top: 120px; /* Espaço para o cabeçalho fixo */
+}
+
+h1, h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+#mensagemSucesso {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+/* Vídeo de fundo */
+.video-container {
+    position: relative; /* Permite que elementos filhos usem position absoluta */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 13px 20px 5px rgba(0, 0, 0, 0.432);
+}
+
+/* Ajustando o vídeo para ficar no fundo */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Garante que o vídeo fique atrás do texto */
+}
+
+/* Texto sobre o vídeo */
+.texto-sobre-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    opacity: 1; /* Começa 100% visível */
+    transition: opacity 0.5s ease-out;
+    z-index: 3; /* Garante que o texto fique acima do vídeo */
+}
+
+/* Barra de Letreiro */
+.letreiro-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    z-index: 2; /* Agora a barra fica acima do vídeo */
+}
+
+/* Animação do letreiro sem pausas */
+.letreiro {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: deslizar 20s linear infinite; /* Ajustamos a duração para 20s */
+}
+
+@keyframes deslizar {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%); /* Agora percorre metade do caminho pois o texto foi duplicado */
+    }
+}
+
+/* Seção de Marcas Parceiras */
+#marcas-parceiras {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+}
+
+#marcas-parceiras p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+    width: 100px;
+    height: auto;
+    margin: 0 20px;
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2a2a2a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 🔹 Ajustes para tablets e celulares */
+@media (max-width: 768px) {
+    .texto-sobre-video {
+        font-size: 1.5em; /* Reduzindo o tamanho da fonte */
+        width: 90%;
+        padding: 10px;
+    }
+
+    #background-video {
+        height: auto; /* Permite que o vídeo ajuste a altura conforme o conteúdo */
+        min-height: 100vh; /* Garante que cubra a tela */
+    }
+
+    .video-container {
+        height: auto; /* Ajusta a altura para telas menores */
+        min-height: 100vh;
+    }
+
+    header {
+        width: 90%;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-sobre-video {
+        font-size: 1.05em;
+        line-height: 1.3;
+        width: 95%;
+    }
+
+    #background-video {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .video-container {
+        height: auto;
+        min-height: 88vh;
+    }
+}
